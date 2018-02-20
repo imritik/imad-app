@@ -5,6 +5,23 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleon={
+    title: 'article-one| ritik verma',
+    heading: 'article-one',
+    date: '5 sep 2109',
+    content: `
+        <p>
+               this is content of first article.this is content of first articlethis is content of first articlethis is content of first articlethis is content of first article
+        
+         </p>
+        
+        <p>
+              this is content of first articlethis is content of first articlethis is content of first articlethis is content of first articlethis is content of first articlethis is content of first articlethis is content of first article
+        
+        </p> `
+};
+    
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
